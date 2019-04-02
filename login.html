@@ -1,0 +1,25 @@
+<html>
+	<body>
+		<script>
+			function func1()
+			{
+				var u=document.f1.t1.value;
+				var p=/[a-zA-Z]$/;
+				if(!p.test(u))
+					window.alert("incorrect uname format");
+				var pwd=document.f1.t2.value;
+				var ppw=/[A-Za-z0-9]/;
+				if(!ppw.test(pwd))
+					window.alert("incorrect password format");
+			}
+		</script>
+		<form name="f1" method="post" onsubmit="func1()">
+			<h1 align=center>Login Page</h1>
+			<h3>Username:</h3>
+			<input type="text" name="t1" maxlength=12>
+			<h3>Password:</h3>
+			<input type="password" name="t2">
+			<input type="submit" value="login">
+		</form>
+	</body>
+</html>
